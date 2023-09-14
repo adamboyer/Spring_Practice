@@ -15,3 +15,6 @@ jobs:
     - name: check version
       run: |
         echo '${{github.ref}}'
+    - name: If check
+      if: github.ref == 'refs/heads/stage'
+      run: echo 'made it!'
