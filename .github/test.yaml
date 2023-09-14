@@ -1,0 +1,17 @@
+name: Get branch test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  get-branch:
+    name: Lint PR Name
+    #    needs: [ setup_env ]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: check version
+      run: |
+        echo '${{github.ref}}'
