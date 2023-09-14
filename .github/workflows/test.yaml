@@ -14,12 +14,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        ref: stage
 
     - name: Setup github
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "<>"
-        git pull https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git HEAD:stage --rebase
+        git pull origin
 
     - name: Update k8s files
       if: github.event.pull_request.base.ref == 'main'
@@ -35,7 +37,7 @@ jobs:
       run: |
         git add ./k8s/*
         git commit -m "updating k8s versions"
-        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git HEAD:stage
+        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git origin 
 
     - name: check version
       run: |
@@ -43,5 +45,4 @@ jobs:
     - name: If check
       if: github.event.pull_request.base.ref == 'main'
       run: echo 'made it!'
-
 
