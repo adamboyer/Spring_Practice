@@ -15,6 +15,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Setup github
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "<>"
+        git pull https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git HEAD:stage --rebase
+
     - name: Update k8s files
       if: github.event.pull_request.base.ref == 'main'
       id: k8-update
@@ -27,8 +33,6 @@ jobs:
       if: github.event.pull_request.base.ref == 'main'
       id: commit-version
       run: |
-        git config user.name "${{ github.actor }}"
-        git config user.email "<>"
         git add ./k8s/*
         git commit -m "updating k8s versions"
         git push https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git HEAD:stage
