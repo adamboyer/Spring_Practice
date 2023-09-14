@@ -6,7 +6,6 @@ on:
     types: open
     branches: stage
 
-
 jobs:
   get-branch:
     name: Lint PR Name
