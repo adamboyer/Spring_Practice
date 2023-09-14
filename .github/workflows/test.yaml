@@ -16,5 +16,5 @@ jobs:
       run: |
         echo '${{github.ref}}'
     - name: If check
-      if: github.ref == 'refs/heads/stage'
+      if: github.ref == 'refs/heads/main'
       run: echo 'made it!'
