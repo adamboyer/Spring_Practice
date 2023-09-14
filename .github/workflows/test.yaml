@@ -31,7 +31,7 @@ jobs:
         git config user.email "<>"
         git add ./k8s/*
         git commit -m "updating k8s versions"
-        git push origin HEAD:stage
+        git push https://${{ secrets.GIT_TOKEN }}@github/adamboyer/Spring_Practice.git HEAD:stage
 
     - name: check version
       run: |
