@@ -1,0 +1,42 @@
+2023-08-17 13:36:36.717 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ Starting SpringInPracticeApplication using Java 17.0.3 with PID 18772 (C:\Users\alexa\Documents\new_work_repos\SpringInPractice\target\classes started by alexa in C:\Users\alexa\Documents\new_work_repos\SpringInPractice)
+2023-08-17 13:36:36.738 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ No active profile set, falling back to 1 default profile: "default"
+2023-08-17 13:36:38.947 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                :
+            ➥ Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-17 13:36:38.952 [ INFO] [  restartedMain] o.a.c.c.StandardService                  :
+            ➥ Starting service [Tomcat]
+2023-08-17 13:36:38.953 [ INFO] [  restartedMain] o.a.c.c.StandardEngine                   :
+            ➥ Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-17 13:36:39.123 [ INFO] [  restartedMain] o.a.c.c.C.[.[.[/]                        :
+            ➥ Initializing Spring embedded WebApplicationContext
+2023-08-17 13:36:39.891 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                :
+            ➥ Starting ProtocolHandler ["http-nio-8080"]
+2023-08-17 13:36:39.937 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ Started SpringInPracticeApplication in 4.08 seconds (process running for 6.496)
+2023-08-17 13:36:39.941 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ Command Line runner has executed
+2023-08-17 13:36:39.956 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ AppProperties{name='CourseTracker', ip='127.0.0.1', port='9090', security=Security{enabled=false, token='null', roles=[USER, ADMIN]}}
+2023-08-17 14:03:05.678 [ INFO] [kground-preinit] o.h.v.i.u.Version                        :
+            ➥ HV000001: Hibernate Validator 8.0.1.Final
+2023-08-17 14:03:05.766 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ Starting SpringInPracticeApplication using Java 17.0.3 with PID 19608 (C:\Users\alexa\Documents\new_work_repos\SpringInPractice\target\classes started by alexa in C:\Users\alexa\Documents\new_work_repos\SpringInPractice)
+2023-08-17 14:03:05.775 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ No active profile set, falling back to 1 default profile: "default"
+2023-08-17 14:03:09.029 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                :
+            ➥ Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-17 14:03:09.035 [ INFO] [  restartedMain] o.a.c.c.StandardService                  :
+            ➥ Starting service [Tomcat]
+2023-08-17 14:03:09.037 [ INFO] [  restartedMain] o.a.c.c.StandardEngine                   :
+            ➥ Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-17 14:03:09.359 [ INFO] [  restartedMain] o.a.c.c.C.[.[.[/]                        :
+            ➥ Initializing Spring embedded WebApplicationContext
+2023-08-17 14:03:11.696 [ INFO] [  restartedMain] o.a.c.h.Http11NioProtocol                :
+            ➥ Starting ProtocolHandler ["http-nio-8080"]
+2023-08-17 14:03:11.725 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ Started SpringInPracticeApplication in 6.695 seconds (process running for 9.215)
+2023-08-17 14:03:11.791 [ERROR] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ A constraint violation has occurred. Violation details: [ConstraintViolationImpl{interpolatedMessage='A course should have a minimum of 1 rating', propertyPath=rating, rootBeanClass=class com.example.springinpractice.Course, messageTemplate='A course should have a minimum of 1 rating'}].
+2023-08-17 14:03:11.798 [ INFO] [  restartedMain] c.e.s.SpringInPracticeApplication        :
+            ➥ AppProperties{name='CourseTracker', ip='127.0.0.1', port='9090', security=Security{enabled=false, token='null', roles=[USER, ADMIN]}}
