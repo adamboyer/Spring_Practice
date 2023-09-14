@@ -21,6 +21,7 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "<>"
+        git remote add origin https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git
         git pull origin
 
     - name: Update k8s files
@@ -37,7 +38,7 @@ jobs:
       run: |
         git add ./k8s/*
         git commit -m "updating k8s versions"
-        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git origin 
+        git push origin 
 
     - name: check version
       run: |
