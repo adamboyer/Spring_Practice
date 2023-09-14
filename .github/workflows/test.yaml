@@ -21,8 +21,7 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "<>"
-        git remote add origin https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git
-        git pull origin
+        git pull origin stage
 
     - name: Update k8s files
       if: github.event.pull_request.base.ref == 'main'
@@ -38,7 +37,7 @@ jobs:
       run: |
         git add ./k8s/*
         git commit -m "updating k8s versions"
-        git push origin 
+        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git stage
 
     - name: check version
       run: |
@@ -46,3 +45,4 @@ jobs:
     - name: If check
       if: github.event.pull_request.base.ref == 'main'
       run: echo 'made it!'
+
