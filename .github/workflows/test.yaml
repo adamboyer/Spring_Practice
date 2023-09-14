@@ -15,6 +15,25 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Update k8s files
+      if: github.event.pull_request.base.ref == 'main'
+      id: k8-update
+      run: |
+        echo "Next Release -> ${{ steps.calculate-release.outputs.next_release }}"
+        sed -i "s/containerTag: '.*'/containerTag: 'v2.0.0'/g" ./k8s/nonprod/webapp.yaml
+        cat ./k8s/nonprod/webapp.yaml
+
+    - name: Commit Version change
+      if: github.event.pull_request.base.ref == 'main'
+      id: commit-version
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "<>"
+        git checkout stage
+        git add ./k8s/*
+        git commit -m "updating k8s versions"
+        git push origin
+
     - name: check version
       run: |
         echo '${{github.event.pull_request.base.ref}}'
