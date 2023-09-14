@@ -29,7 +29,6 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "<>"
-        git checkout stage
         git add ./k8s/*
         git commit -m "updating k8s versions"
         git push origin
