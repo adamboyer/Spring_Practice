@@ -17,9 +17,9 @@ jobs:
 
     - name: check version
       run: |
-        echo '${{github.ref}}'
+        echo '${{github.event.pull_request.base.ref}}'
     - name: If check
-      if: github.ref == 'refs/heads/main'
+      if: github.event.pull_reqeust.base.ref == 'refs/heads/main'
       run: echo 'made it!'
 
 
