@@ -3,7 +3,7 @@ name: Get branch test
 on:
   workflow_dispatch:
   pull_request:
-    types: open
+    types: [opened, reopened]
     branches: [main]
 
 jobs:
@@ -21,4 +21,3 @@ jobs:
     - name: If check
       if: github.ref == 'refs/heads/main'
       run: echo 'made it!'
-
