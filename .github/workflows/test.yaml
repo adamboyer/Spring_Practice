@@ -21,7 +21,7 @@ jobs:
       run: |
         git config user.name "${{ github.actor }}"
         git config user.email "<>"
-        git pull origin stage
+        git pull https://${{ secrets.GITHUB_TOKEN }}@github.com/adamboyer/Spring_Practice.git stage
 
     - name: Update k8s files
       if: github.event.pull_request.base.ref == 'main'
@@ -45,3 +45,4 @@ jobs:
     - name: If check
       if: github.event.pull_request.base.ref == 'main'
       run: echo 'made it!'
+
