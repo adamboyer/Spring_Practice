@@ -28,7 +28,7 @@ jobs:
       id: k8-update
       run: |
         echo "Next Release -> ${{ steps.calculate-release.outputs.next_release }}"
-        sed -i "s/containerTag: '.*'/containerTag: 'v2.0.0'/g" ./k8s/nonprod/webapp.yaml
+        sed -i "s/containerTag: '.*'/containerTag: 'v3.0.0'/g" ./k8s/nonprod/webapp.yaml
         cat ./k8s/nonprod/webapp.yaml
 
     - name: Commit Version change
